@@ -24,8 +24,6 @@ const render = employees => {
 };
 
 const renderManager = manager => {
-    console.log("current directory:", __dirname);
-    console.log("templatesDir:", templatesDir);
     let template = fs.readFileSync(path.resolve(templatesDir, "manager.html"), "utf8");
     template = replacePlaceholders(template, "name", manager.getName());
     template = replacePlaceholders(template, "role", manager.getRole());
